@@ -179,3 +179,12 @@ cython_debug/
 #  refer to https://docs.cursor.com/context/ignore-files
 .cursorignore
 .cursorindexingignore
+
+# ML / Data
+data/
+models/
+
+# big files / models
+*.pkl 
+*.pt 
+*.h5
