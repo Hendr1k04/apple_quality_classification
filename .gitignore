@@ -181,7 +181,7 @@ cython_debug/
 .cursorindexingignore
 
 # ML / Data
-data/
+#data/
 models/
 
 # big files / models
