@@ -4,6 +4,7 @@ import numpy as np
 from PIL import Image
 import matplotlib.pyplot as plt
 
+#Die APp unterstützt lediglich die vollständigen CNN Modelle
 # Wichtig:
 # Diese Reihenfolge muss exakt zu deinem Training passen.
 # Falls train_ds.class_names bei dir anders ausgegeben wurde, hier entsprechend ändern.
@@ -12,7 +13,7 @@ CLASS_NAMES = ["Apple__Healthy", "Apple__Rotten"]
 # in neuem Terminal "pip install -r requirements.txt"
 #dann "streamlit run app.py"
 IMG_SIZE = (224, 224)
-MODEL_PATH = "bestModel_mobilenet.keras"
+MODEL_PATH = "MobileNetV2FT.keras"
 
 # Für MobileNetV2 ist der letzte Conv-Layer normalerweise "Conv_1".
 LAST_CONV_LAYER_NAME = "Conv_1"
@@ -187,7 +188,7 @@ try:
     model = load_trained_model()
 except Exception as e:
     st.error("Das Modell konnte nicht geladen werden.")
-    st.write("Prüfe, ob `bestModel_mobilenet.keras` im gleichen Ordner wie `app.py` liegt.")
+    st.write("Prüfe, ob `MobileNetV2FT.keras` im gleichen Ordner wie `app.py` liegt.")
     st.exception(e)
     st.stop()
 
