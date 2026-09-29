@@ -207,9 +207,9 @@ if uploaded_file is not None:
     st.subheader("Ergebnis")
 
     if predicted_class == "Apple__Healthy":
-        st.success("Vorhersage: Healthy 🍏")
+        st.success("Vorhersage: Healthy")
     else:
-        st.error("Vorhersage: Rotten 🍎")
+        st.error("Vorhersage: Rotten")
 
     st.write(f"**Modellklasse:** `{predicted_class}`")
     st.write(f"**Konfidenz:** {confidence:.2%}")
